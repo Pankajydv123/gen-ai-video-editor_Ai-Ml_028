@@ -1,0 +1,38 @@
+.tat a {
+    width:130px;
+    height: 52px;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(48, 114, 49);
+    font-family: sans-serif;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing:0.1em;
+}
+
+.tat a:hover{
+    font-family: sans-serif;
+    background-color: rgb(75, 137, 129);
+    border-radius: 20px;
+    letter-spacing:0.27em;
+    color: rgb(234, 249, 187);
+    filter: drop-shadow(0 0 10px rgb(147, 206, 9)) drop-shadow(0 0 30px rgb(147, 206, 9));
+}
+
+li a{
+    letter-spacing: 1px;
+    color: rgb(48, 114, 49);
+}
+
+li a:hover{
+    background-color: rgb(47, 174, 157);
+    filter: drop-shadow(0 0 10px rgb(21, 242, 106)) drop-shadow(0 0 30px rgb(21, 242, 106));
+    border-radius: 8px;
+    transition: 0.35s;
+}
+
+
+
