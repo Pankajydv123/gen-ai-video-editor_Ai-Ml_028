@@ -1,0 +1,62 @@
+.body-container {
+  background: linear-gradient(-45deg, #574d45, #41472a, #243c45, #2d6f60);
+  background-size: 400% 400%;
+  position: relative;
+  animation: gradientShift 7s ease infinite;
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+    z-index: 0;
+}
+
+.bubbles span{
+    position: relative;
+    background-color: rgb(216, 177, 46);
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #d0dc4f44,
+    0 0 50px #d0dc4f,
+    0 0 100px #d0dc4f;
+    animation: anima 15s linear infinite;
+    animation-duration: calc(120s/var(--i));
+}
+
+
+.bubbles span:nth-child(even){
+    background-color: #778e39;
+    box-shadow: 0 0 10px #49925b44,
+    0 0 50px #49925b,
+    0 0 100px #49925b;
+}
+@keyframes anima{
+    0%{
+        transform: translateY(400vh) scale(1);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+}
