@@ -1,22 +1,31 @@
 import React from 'react';
 import './Navbar.css';
 import './title.css';
+import { Link } from 'react-router-dom';
+import Logo from '../Assests/Logo.png';
 
-export default function Navbar(props) {
+export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fantastic-gradient" style={{
-  padding: '1rem 2rem 1rem 0.5rem',
+      padding: '1rem 2rem 1rem 0.5rem',
   boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
   borderBottom: '1px solid #e0e0e0',
   position: 'sticky',
   top: 0,
   zIndex: 1000,
 }}>
-      <div className="container-fluid" id="Tat">
+      <div className="container-fluid d-flex justify-content-between align-items-center" id="Tat" >
         <div className="tat">
-          <a className="navbar-brand fw-bold" id="Tit" href="/">
-          {props.title}
-        </a>
+          <Link className="navbar-brand fw-bold" to="/">
+          <img
+            src={Logo} 
+            alt="GenAi Logo"
+            style={{
+            width: '45px',
+            height: '45px',}}
+          />
+           <span id="tit">GenAi</span>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -32,52 +41,29 @@ export default function Navbar(props) {
 
         </div>
         
-        <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0" >
+        <div className="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/" >
+              <Link id="hello" className="nav-link active" aria-current="page" to="/" >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/" >
+              <Link id="hello" className="nav-link" to="/Features" >
                 Features
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/" >
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/" >
+              <Link id="hello" className="nav-link" to="/About" >
                 About
-              </a>
+              </Link>
             </li>
           </ul>
 
-          <form className="d-flex align-items-center" role="search" style={{ gap: '0.5rem' }}>
-            <div style={{ position: 'relative' }}>
-              <input
-                className="form-control"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                style={{
-                  paddingLeft: '1rem',
-                  borderRadius: '10px',
-                  border: '1px solid rgb(35 255 0)',
-                  backgroundColor: '#f9f9f9',
-                  color: '#333',
-                }}
-              />
-            </div>
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+
         </div>
       </div>
     </nav>
   );
 }
+

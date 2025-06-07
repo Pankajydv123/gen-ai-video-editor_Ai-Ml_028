@@ -1,12 +1,11 @@
 .tat a {
-    width:130px;
-    height: 52px;
-    font-size: 1.8em;
+    width:180px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(48, 114, 49);
-    font-family: sans-serif;
+    color: rgb(144, 8, 67);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: pointer;
     overflow: hidden;
     transition: 0.5s;
@@ -14,7 +13,7 @@
 }
 
 .tat a:hover{
-    font-family: sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(75, 137, 129);
     border-radius: 20px;
     letter-spacing:0.27em;
@@ -23,6 +22,7 @@
 }
 
 li a{
+    font-family:monospace;
     letter-spacing: 1px;
     color: rgb(48, 114, 49);
 }
@@ -34,5 +34,11 @@ li a:hover{
     transition: 0.35s;
 }
 
+.tat span{
+    font-size: 1.8em;
+    margin-left: 13px;
+}
 
-
+#hello{
+    font-size: 20px;
+}
