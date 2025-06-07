@@ -1,5 +1,5 @@
 .body-container {
-  background: linear-gradient(-45deg, #574d45, #41472a, #243c45, #2d6f60);
+  background: linear-gradient(-45deg, #574d45, #616c33, #244c5b, #267361);
   background-size: 400% 400%;
   position: relative;
   animation: gradientShift 7s ease infinite;
