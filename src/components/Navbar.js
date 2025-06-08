@@ -21,10 +21,10 @@ export default function Navbar() {
             src={Logo} 
             alt="GenAi Logo"
             style={{
-            width: '45px',
-            height: '45px',}}
+            width: '44px',
+            height: '44px',}}
           />
-           <span id="tit">GenAi</span>
+           <span id="tit">Progen Ai</span>
         </Link>
 
         <button
@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarContent">
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link id="hello" className="nav-link active" aria-current="page" to="/" >
+              <Link id="hello" className="nav-link" aria-current="page" to="/" >
                 Home
               </Link>
             </li>

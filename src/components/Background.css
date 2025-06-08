@@ -5,7 +5,6 @@
   animation: gradientShift 7s ease infinite;
   min-height: 100vh;
   color: white;
-  padding: 20px;
 }
 
 @keyframes gradientShift {
@@ -51,10 +50,10 @@
 }
 @keyframes anima{
     0%{
-        transform: translateY(400vh) scale(1);
+        transform: translate(-50%, 270vh) scale(1);
     }
     100%{
-        transform: translateY(-10vh) scale(1);
+        transform: translate(-50%, -150vh) scale(1);
     }
 }
 
