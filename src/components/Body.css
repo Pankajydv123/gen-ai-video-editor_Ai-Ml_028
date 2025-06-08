@@ -1,0 +1,223 @@
+.heading-box h1{
+  display: flex;
+  justify-content: center;
+  font-family:serif;
+  font-weight: 700;
+  font-size: 100px;
+  font-weight: bold;
+  background-size: 400% 400%;
+  background: linear-gradient(90deg, #ff0057, #14dad3, #ff00f7, #ff006f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-box{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+.container1{
+    display: flex-row;
+    justify-content: center;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    padding-left: 330px;
+    padding-right: 330px;
+    color: rgb(241, 250, 195)
+}
+
+#hye{
+    font-size: 40px;
+}
+
+.container2{
+    display: flex;
+
+}
+
+
+
+.container3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    height: 400px;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.image1,
+.image2,
+.image3 {
+  transition: all 0.7s ease;
+  border-radius: 30px;
+  position: absolute;
+}
+
+#image-stacked-1{
+    padding-top: 120px;
+    padding-bottom: 150px;
+}
+
+.image2 {
+  width: 300px;
+  z-index: 3;
+}
+
+.image1 {
+  width: 220px;
+  z-index: 2;
+  transform: translateX(55%);
+}
+
+.image3 {
+  width: 220px;
+  z-index: 2;
+  transform: translateX(-55%);
+}
+
+
+.container3:hover .image1 {
+  width: 260px;
+  transform: translateX(75%);
+}
+
+.container3:hover .image3 {
+  width: 260px;
+  transform: translateX(-75%);
+}
+
+.textcontainer3{
+  padding: 40px 50px 20px 50px;
+    width: 390px;
+    margin-left: 170px;
+    background-color: rgba(95, 158, 160, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.textcontainer3 h2{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.3em;
+}
+
+.textcontainer3 p{
+  padding-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.1em;
+}
+
+.textcontainer3 button{
+  margin-left: 100px;
+  margin-top: 15px;
+  border-radius: 30px;
+  padding: 3px 8px;
+  color: azure;
+  font-size: 0.9em;
+  border-color: rgb(142, 144, 242);
+  background-color: rgb(142, 144, 242);
+  height: 45px;
+  transition: 0.3s ease;
+}
+
+.textcontainer3 button:hover{
+  box-shadow: 0 4px 20px rgba(142, 144, 242, 0.6);
+}
+
+.container4{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    height: 400px;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+.video1,
+.video2,
+.video3 {
+  transition: all 0.7s ease;
+  border-radius: 30px;
+  position: absolute;
+}
+
+#image-stacked-2{
+    padding-top: 120px;
+    padding-bottom: 150px;
+}
+
+.video2 {
+  width: 300px;
+  z-index: 3;
+}
+
+.video1 {
+  width: 220px;
+  z-index: 2;
+  transform: translateX(55%);
+}
+
+.video3 {
+  width: 220px;
+  z-index: 2;
+  transform: translateX(-55%);
+}
+
+
+.container5:hover .video1 {
+  width: 260px;
+  transform: translateX(75%);
+}
+
+.container5:hover .video3 {
+  width: 260px;
+  transform: translateX(-75%);
+}
+
+.textcontainer5{
+  padding: 40px 50px 20px 50px;
+    width: 390px;
+    margin-right: 170px;
+    background-color: rgba(95, 158, 160, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.textcontainer5 h2{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.3em;
+}
+
+.textcontainer5 p{
+  padding-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.1em;
+}
+
+.textcontainer5 button{
+  margin-right: 100px;
+  margin-top: 15px;
+  border-radius: 30px;
+  padding: 3px 8px;
+  color: azure;
+  font-size: 0.9em;
+  border-color: rgb(142, 144, 242);
+  background-color: rgb(142, 144, 242);
+  height: 45px;
+  transition: 0.3s ease;
+}
+
+.textcontainer5 button:hover{
+  box-shadow: 0 4px 20px rgba(142, 144, 242, 0.6);
+}

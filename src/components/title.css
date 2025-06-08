@@ -1,6 +1,6 @@
 .tat a {
-    width:180px;
-    height: 50px;
+    width:270px;
+    height: 56px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,18 +13,13 @@
 }
 
 .tat a:hover{
+    padding: 8px 10px 8px 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(75, 137, 129);
     border-radius: 20px;
     letter-spacing:0.27em;
     color: rgb(234, 249, 187);
     filter: drop-shadow(0 0 10px rgb(147, 206, 9)) drop-shadow(0 0 30px rgb(147, 206, 9));
-}
-
-li a{
-    font-family:monospace;
-    letter-spacing: 1px;
-    color: rgb(48, 114, 49);
 }
 
 li a:hover{
@@ -35,10 +30,17 @@ li a:hover{
 }
 
 .tat span{
-    font-size: 1.8em;
+    font-size: 1.7em;
     margin-left: 13px;
 }
 
 #hello{
-    font-size: 20px;
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    color: rgb(72, 37, 44);
+}
+
+#hello:hover{
+    color: #edf597;
 }
