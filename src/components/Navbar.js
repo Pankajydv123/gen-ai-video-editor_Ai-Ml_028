@@ -14,7 +14,7 @@ export default function Navbar() {
   top: 0,
   zIndex: 1000,
 }}>
-      <div className="container-fluid d-flex justify-content-between align-items-center" id="Tat" >
+      <div className="container-fluid d-flex align-items-center" id="Tat" >
         <div className="tat">
           <Link className="navbar-brand fw-bold" to="/">
           <img
@@ -25,7 +25,7 @@ export default function Navbar() {
           />
            <span id="tit">Progen Ai</span>
         </Link>
-
+        </div>
         <button
           className="navbar-toggler"
           type="button"
@@ -37,22 +37,20 @@ export default function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
-        </div>
         
         <div className="collapse navbar-collapse justify-content-end" id="navbarContent">
           <ul className="navbar-nav mb-2 mb-lg-0">
-            <li className="nav-item">
+            <li className="nav-item-1">
               <Link id="hello" className="nav-link" aria-current="page" to="/" >
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item-2">
               <Link id="hello" className="nav-link" to="/Features" >
                 Features
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item-3">
               <Link id="hello" className="nav-link" to="/About" >
                 About
               </Link>
