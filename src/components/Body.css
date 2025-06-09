@@ -157,12 +157,12 @@
     padding-right:1%;
 }
 
-.container5:hover .video1 {
+.container5:hover .image1 {
   height: 42vh;
   transform: translateX(70%);
 }
 
-.container5:hover .video3 {
+.container5:hover .image3 {
   height: 42vh;
   transform: translateX(-70%);
 }
