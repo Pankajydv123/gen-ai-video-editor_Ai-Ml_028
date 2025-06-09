@@ -3,7 +3,7 @@
   justify-content: center;
   font-family:serif;
   font-weight: 700;
-  font-size: 100px;
+  font-size: 6.51vw;
   font-weight: bold;
   background-size: 400% 400%;
   background: linear-gradient(90deg, #ff0057, #14dad3, #ff00f7, #ff006f);
@@ -12,8 +12,8 @@
 }
 
 .heading-box{
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 13.7vh;
+  padding-bottom: 13.7vh;
 }
 
 
@@ -23,13 +23,13 @@
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
-    padding-left: 330px;
-    padding-right: 330px;
+    padding-left: 21.48vw;
+    padding-right: 21.48vw;
     color: rgb(241, 250, 195)
 }
 
 #hye{
-    font-size: 40px;
+    font-size: 2.6vw;
 }
 
 .container2{
@@ -45,9 +45,9 @@
     align-items: center;
     position: relative;
     width: 40%;
-    height: 400px;
-    margin-left: 150px;
-    margin-top: 50px;
+    height: 54.8vh;
+    margin-left: 9.76vw;
+    margin-top: 6.84vh;
 }
 
 .image1,
@@ -59,45 +59,45 @@
 }
 
 #image-stacked-1{
-    padding-top: 120px;
-    padding-bottom: 150px;
+    padding-top: 16.44vh;
+    padding-bottom: 20.54vh;
 }
 
 .image2 {
-  width: 300px;
+  width: 19.53vw;
   z-index: 3;
 }
 
 .image1 {
-  width: 220px;
+  width: 14.32vw;
   z-index: 2;
   transform: translateX(55%);
 }
 
 .image3 {
-  width: 220px;
+  width: 14.32vw;
   z-index: 2;
   transform: translateX(-55%);
 }
 
 
 .container3:hover .image1 {
-  width: 260px;
+  width: 16.92vw;
   transform: translateX(75%);
 }
 
 .container3:hover .image3 {
-  width: 260px;
+  width: 16.92vw;
   transform: translateX(-75%);
 }
 
 .textcontainer3{
-  padding: 40px 50px 20px 50px;
-    width: 390px;
-    margin-left: 170px;
+  padding: 5.48vh 3.26vw 2.74vh 3.26vw;
+    width: 25.39vw;
+    margin-left: 11.07vw;
     background-color: rgba(95, 158, 160, 0.1);
-    border-radius: 18px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
+    box-shadow: 0 0.54vh 20px rgba(0, 0, 0, 0.1);
 }
 
 .textcontainer3 h2{
@@ -106,26 +106,26 @@
 }
 
 .textcontainer3 p{
-  padding-top: 10px;
+  padding-top: 1.37vh;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.1em;
 }
 
 .textcontainer3 button{
-  margin-left: 100px;
-  margin-top: 15px;
-  border-radius: 30px;
-  padding: 3px 8px;
+  margin-left: 6.51vw;
+  margin-top: 2.05vh;
+  border-radius: 1.95vw;
+  padding: 0.41vh 0.52vw;
   color: azure;
   font-size: 0.9em;
   border-color: rgb(142, 144, 242);
   background-color: rgb(142, 144, 242);
-  height: 45px;
+  height: 6.16vh;
   transition: 0.3s ease;
 }
 
 .textcontainer3 button:hover{
-  box-shadow: 0 4px 20px rgba(142, 144, 242, 0.6);
+  box-shadow: 0 0.54vh 20px rgba(142, 144, 242, 0.6);
 }
 
 .container4{
@@ -139,9 +139,9 @@
     align-items: center;
     position: relative;
     width: 40%;
-    height: 400px;
-    margin-right: 150px;
-    margin-top: 50px;
+    height: 54.8vh;
+    margin-right: 9.76vw;
+    margin-top: 6.85vh;
 }
 
 .video1,
@@ -153,45 +153,45 @@
 }
 
 #image-stacked-2{
-    padding-top: 120px;
-    padding-bottom: 150px;
+    padding-top: 16.44vh;
+    padding-bottom: 20.55vh;
 }
 
 .video2 {
-  width: 300px;
+  width: 19.53vw;
   z-index: 3;
 }
 
 .video1 {
-  width: 220px;
+  width: 14.32vw;
   z-index: 2;
   transform: translateX(55%);
 }
 
 .video3 {
-  width: 220px;
+  width: 14.32vw;
   z-index: 2;
   transform: translateX(-55%);
 }
 
 
 .container5:hover .video1 {
-  width: 260px;
+  width: 16.93vw;
   transform: translateX(75%);
 }
 
 .container5:hover .video3 {
-  width: 260px;
+  width: 16.93vw;
   transform: translateX(-75%);
 }
 
 .textcontainer5{
-  padding: 40px 50px 20px 50px;
-    width: 390px;
-    margin-right: 170px;
+  padding: 5.48vh 3.25vw 2.74vh 3.25vw;
+    width: 25.39vw;
+    margin-right: 11.07vw;
     background-color: rgba(95, 158, 160, 0.1);
-    border-radius: 18px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
+    box-shadow: 0 0.55vh 20px rgba(0, 0, 0, 0.1);
 }
 
 .textcontainer5 h2{
@@ -200,24 +200,24 @@
 }
 
 .textcontainer5 p{
-  padding-top: 10px;
+  padding-top: 1.37vh;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.1em;
 }
 
 .textcontainer5 button{
-  margin-right: 100px;
-  margin-top: 15px;
-  border-radius: 30px;
-  padding: 3px 8px;
+  margin-right: 6.51vw;
+  margin-top: 6.85vh;
+  border-radius: 1.95vw;
+  padding: 0.41vh 0.52vw;
   color: azure;
   font-size: 0.9em;
   border-color: rgb(142, 144, 242);
   background-color: rgb(142, 144, 242);
-  height: 45px;
+  height: 6.16vh;
   transition: 0.3s ease;
 }
 
 .textcontainer5 button:hover{
-  box-shadow: 0 4px 20px rgba(142, 144, 242, 0.6);
+  box-shadow: 0 0.55vh 20px rgba(142, 144, 242, 0.6);
 }
