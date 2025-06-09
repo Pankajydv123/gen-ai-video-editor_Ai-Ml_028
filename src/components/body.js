@@ -81,13 +81,13 @@ export default function body() {
             </div>
           </div>
 
-          <div id='image-stacked-1' className='container2'>
+          <div id='image-stacked' className='container2'>
             <div className="container3">
             <img className='image image1' src={photo7} alt="" />
             <img className='image image2' src={photo6} alt="" />
             <img className='image image3' src={photo8} alt="" />
             </div>
-            <div className='textcontainer3'>
+            <div className='textcontainer'>
               <h2>AI Image Editor</h2>
               <p>Edit your photo with ease using powerful AI that understands what you need. Whether you're removing distractions, enhancing 
                 details, or giving your image a whole new look, everything happens smoothly and quickly. No complex tools—just smart, effortless 
@@ -95,13 +95,13 @@ export default function body() {
               <button className="button1">Unleash the AI Touch</button>
             </div>
           </div>
-          <div id='image-stacked-2' className="container4">
+          <div id='image-stacked' className="container4">
             <div className="container5">
-              <img className='video video1' src={video1} alt="" />
-              <img className='video video2' src={video2} alt="" />
-              <img className='video video3' src={video3} alt="" />
+              <img className='image image1' src={video1} alt="" />
+              <img className='image image2' src={video2} alt="" />
+              <img className='image image3' src={video3} alt="" />
             </div>
-            <div className='textcontainer5'>
+            <div className='textcontainer'>
               <h2>AI Video Editor</h2>
               <p>Edit your video with ease using powerful AI that adapts to your creative vision. Whether you're cutting unwanted scenes, enhancing 
                 visuals, adjusting audio, or adding stylish effects, everything happens smoothly and efficiently. No complicated software—just 
