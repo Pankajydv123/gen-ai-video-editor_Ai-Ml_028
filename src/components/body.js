@@ -58,7 +58,7 @@ export default function body() {
             <h1>Progen Ai</h1>
             <div className="container1">
               <p id='hye'>Ai Online Photo Editor and Video Editor</p>
-              <p>A smarter way to edit your photos and videos starts here. Powered by generative AI, this editor helps you enhance visuals, create smooth transitions, and try out effects that add something unique.</p>
+              <p id='hey'>A smarter way to edit your photos and videos starts here. Powered by generative AI, this editor helps you enhance visuals, create smooth transitions, and try out effects that add something unique.</p>
             </div>
           </div>
 
