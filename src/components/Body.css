@@ -1,4 +1,6 @@
-.heading-box h1{
+
+@media (min-width: 768px) {
+  .heading-box h1{
   display: flex;
   justify-content: center;
   font-family:serif;
@@ -23,8 +25,6 @@
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
-    padding-left: 21.48vw;
-    padding-right: 21.48vw;
     color: rgb(241, 250, 195)
 }
 
@@ -32,9 +32,11 @@
     font-size: 2.6vw;
 }
 
-.container2{
+  .container2{
     display: flex;
-
+    gap: 5%;
+    height: 100vh;
+    margin-top: 2vh;
 }
 
 
@@ -43,76 +45,81 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
     position: relative;
-    width: 40%;
-    height: 54.8vh;
-    margin-left: 9.76vw;
-    margin-top: 6.84vh;
+    width: 60%;
+    height: 100%;
+    padding-left:1%;
 }
 
 .image1,
 .image2,
 .image3 {
   transition: all 0.7s ease;
-  border-radius: 30px;
+  border-radius: 8%;
   position: absolute;
 }
 
-#image-stacked-1{
-    padding-top: 16.44vh;
-    padding-bottom: 20.54vh;
+#image-stacked{
+    padding-top: 7%;
+    padding-bottom: 8.74%;
 }
 
 .image2 {
-  width: 19.53vw;
+  height: 50vh;
   z-index: 3;
 }
 
 .image1 {
-  width: 14.32vw;
+  height: 35vh;
   z-index: 2;
   transform: translateX(55%);
 }
 
 .image3 {
-  width: 14.32vw;
+  height: 35vh;
   z-index: 2;
   transform: translateX(-55%);
 }
 
 
 .container3:hover .image1 {
-  width: 16.92vw;
-  transform: translateX(75%);
+  height: 42vh;
+  transform: translateX(70%);
 }
 
 .container3:hover .image3 {
-  width: 16.92vw;
-  transform: translateX(-75%);
+  height: 42vh;
+  transform: translateX(-70%);
 }
 
-.textcontainer3{
-  padding: 5.48vh 3.26vw 2.74vh 3.26vw;
-    width: 25.39vw;
-    margin-left: 11.07vw;
+.textcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+    padding: 1.68% 2% 0.84% 1%;
+    width: 30%;
+    max-height: 60vh;
     background-color: rgba(95, 158, 160, 0.1);
     border-radius: 5%;
     box-shadow: 0 0.54vh 20px rgba(0, 0, 0, 0.1);
 }
 
-.textcontainer3 h2{
+.textcontainer h2{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 2.3em;
+  font-size: 1.5em;
 }
 
-.textcontainer3 p{
-  padding-top: 1.37vh;
+.textcontainer p{
+  padding-top: 10%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.1em;
+  font-size: 0.8em;
 }
 
-.textcontainer3 button{
-  margin-left: 6.51vw;
+.textcontainer button{
+  margin-left: 10%;
   margin-top: 2.05vh;
   border-radius: 1.95vw;
   padding: 0.41vh 0.52vw;
@@ -120,104 +127,210 @@
   font-size: 0.9em;
   border-color: rgb(142, 144, 242);
   background-color: rgb(142, 144, 242);
-  height: 6.16vh;
+  height: 30%;
   transition: 0.3s ease;
 }
 
-.textcontainer3 button:hover{
+.textcontainer button:hover{
   box-shadow: 0 0.54vh 20px rgba(142, 144, 242, 0.6);
 }
+
 
 .container4{
     display: flex;
     flex-direction: row-reverse;
+    gap: 5%;
+    height: 100vh;
+    margin-top: 2vh;
 }
+
+
 
 .container5{
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
     position: relative;
-    width: 40%;
-    height: 54.8vh;
-    margin-right: 9.76vw;
-    margin-top: 6.85vh;
+    width: 60%;
+    height: 100%;
+    padding-right:1%;
 }
-
-.video1,
-.video2,
-.video3 {
-  transition: all 0.7s ease;
-  border-radius: 30px;
-  position: absolute;
-}
-
-#image-stacked-2{
-    padding-top: 16.44vh;
-    padding-bottom: 20.55vh;
-}
-
-.video2 {
-  width: 19.53vw;
-  z-index: 3;
-}
-
-.video1 {
-  width: 14.32vw;
-  z-index: 2;
-  transform: translateX(55%);
-}
-
-.video3 {
-  width: 14.32vw;
-  z-index: 2;
-  transform: translateX(-55%);
-}
-
 
 .container5:hover .video1 {
-  width: 16.93vw;
-  transform: translateX(75%);
+  height: 42vh;
+  transform: translateX(70%);
 }
 
 .container5:hover .video3 {
-  width: 16.93vw;
-  transform: translateX(-75%);
+  height: 42vh;
+  transform: translateX(-70%);
 }
 
-.textcontainer5{
-  padding: 5.48vh 3.25vw 2.74vh 3.25vw;
-    width: 25.39vw;
-    margin-right: 11.07vw;
+}
+
+@media (max-width: 768px) {
+  .heading-box h1{
+  display: flex;
+  justify-content: center;
+  font-family:serif;
+  font-weight: 700;
+  font-size: 6.51vw;
+  font-weight: bold;
+  background-size: 400% 400%;
+  background: linear-gradient(90deg, #ff0057, #14dad3, #ff00f7, #ff006f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-box{
+  padding-top: 13.7vh;
+  padding-bottom: 13.7vh;
+}
+
+
+.container1{
+    display: flex-row;
+    justify-content: center;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: rgb(241, 250, 195)
+}
+
+#hye{
+    font-size: 2.6vw;
+}
+
+  .container2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
+
+
+.container3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    height: 40vh;
+    padding: 5vh 10vw;
+}
+
+.image1,
+.image2,
+.image3 {
+  transition: all 0.7s ease;
+  border-radius: 8%;
+  position: absolute;
+}
+
+#image-stacked{
+    padding-top: 7%;
+    padding-bottom: 8.74%;
+}
+
+.image2 {
+  width: 40vw;
+  z-index: 3;
+}
+
+.image1 {
+  width: 25vw;
+  z-index: 2;
+  transform: translateX(90%);
+}
+
+.image3 {
+  width: 25vw;
+  z-index: 2;
+  transform: translateX(-90%);
+}
+
+
+.container3:hover .image1 {
+  width: 30vw;
+  transform: translateX(70%);
+}
+
+.container3:hover .image3 {
+  width: 30vw;
+  transform: translateX(-70%);
+}
+
+.textcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+    padding: 2vh 1.5vw 1.8vh 1.5vw;
+    width: 90vw;
+    margin-top: 1.5vh;
+    margin-bottom: 2vh;
     background-color: rgba(95, 158, 160, 0.1);
     border-radius: 5%;
-    box-shadow: 0 0.55vh 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.54vh 20px rgba(0, 0, 0, 0.1);
 }
 
-.textcontainer5 h2{
+.textcontainer h2{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 2.3em;
+  font-size: 1.5em;
 }
 
-.textcontainer5 p{
-  padding-top: 1.37vh;
+.textcontainer p{
+  padding-top: 3vh;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.1em;
+  font-size: 0.8em;
 }
 
-.textcontainer5 button{
-  margin-right: 6.51vw;
-  margin-top: 6.85vh;
-  border-radius: 1.95vw;
-  padding: 0.41vh 0.52vw;
+.textcontainer button{
+  margin-left: 10%;
+  margin-top: 2.05vh;
+  border-radius: 2vh;
+  padding: 0.41vh 3vw 0.41vh 3vw;
   color: azure;
   font-size: 0.9em;
   border-color: rgb(142, 144, 242);
   background-color: rgb(142, 144, 242);
-  height: 6.16vh;
+  height: 6vh;
   transition: 0.3s ease;
 }
 
-.textcontainer5 button:hover{
-  box-shadow: 0 0.55vh 20px rgba(142, 144, 242, 0.6);
+.textcontainer button:hover{
+  box-shadow: 0 0.54vh 20px rgba(142, 144, 242, 0.6);
+}
+
+
+.container4{
+  margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.container5{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    height: 40vh;
+    padding: 5vh 10vw;
+}
+
+.container5:hover .video1 {
+  height: 42vh;
+  transform: translateX(70%);
+}
+
+.container5:hover .video3 {
+  height: 42vh;
+  transform: translateX(-70%);
+}
+
 }

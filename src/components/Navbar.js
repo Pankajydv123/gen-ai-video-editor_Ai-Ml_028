@@ -21,8 +21,7 @@ export default function Navbar() {
             src={Logo} 
             alt="GenAi Logo"
             style={{
-            width: '44px',
-            height: '44px',}}
+            height: '99%',}}
           />
            <span id="tit">Progen Ai</span>
         </Link>
