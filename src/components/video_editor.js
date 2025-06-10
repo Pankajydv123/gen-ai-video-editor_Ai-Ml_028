@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Video_editor() {
+export default function VideoEditor() {
   return (
     <div>
       <h1>hello i am video editor feature</h1>
