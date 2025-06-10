@@ -1,0 +1,20 @@
+footer a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    float: left;
+    text-align: center;
+}
+
+footer{
+    background-color: black;
+    overflow: hidden;
+}
+
+footer a:visited{
+    color: darksalmon;
+}
+
+footer a:hover{
+    color: hotpink;
+}

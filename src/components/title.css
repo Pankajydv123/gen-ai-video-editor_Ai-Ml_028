@@ -56,7 +56,7 @@ ul{
     align-self: center;
 }
 
-li a:hover{
+.navbar-nav li a:hover{
     background-color: rgb(47, 174, 157);
     filter: drop-shadow(0 0 10px rgb(21, 242, 106)) drop-shadow(0 0 30px rgb(21, 242, 106));
     border-radius: 0.5vw;

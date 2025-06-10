@@ -119,6 +119,8 @@
 }
 
 .textcontainer button{
+  width: 10vw;
+  font-family:serif;
   margin-left: 10%;
   margin-top: 2.05vh;
   border-radius: 1.95vw;
@@ -292,6 +294,8 @@
 }
 
 .textcontainer button{
+  width: 10vw;
+  font-family:serif;
   margin-left: 10%;
   margin-top: 2.05vh;
   border-radius: 2vh;
