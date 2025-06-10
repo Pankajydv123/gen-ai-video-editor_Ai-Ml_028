@@ -1,6 +1,7 @@
 import React from 'react';
 import './Background.css';
 import './Body.css';
+import { Link } from 'react-router-dom';
 import photo6 from '../Assests/photo6.jpg';
 import photo7 from '../Assests/photo7.jpg';
 import photo8 from '../Assests/photo8.jpg';
@@ -73,7 +74,9 @@ export default function body() {
               <p>Edit your photo with ease using powerful AI that understands what you need. Whether you're removing distractions, enhancing 
                 details, or giving your image a whole new look, everything happens smoothly and quickly. No complex tools—just smart, effortless 
                 results that make your photos stand out.</p>
+              <Link to="/image_editor">
               <button className="button1">Unleash the AI Touch</button>
+              </Link>
             </div>
           </div>
           <div id='image-stacked' className="container4">
@@ -87,7 +90,9 @@ export default function body() {
               <p>Edit your video with ease using powerful AI that adapts to your creative vision. Whether you're cutting unwanted scenes, enhancing 
                 visuals, adjusting audio, or adding stylish effects, everything happens smoothly and efficiently. No complicated software—just 
                 smart, intuitive tools that help your videos look polished and professional in no time.</p>
+              <Link to="/video_editor">
               <button className="button2">Unleash the AI Touch</button>
+              </Link>
             </div>
           </div>
         </div>
