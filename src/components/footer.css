@@ -1,0 +1,115 @@
+.Footer{
+    padding: 5vh 10vw 2vh 10vw;
+    color: rgba(231, 238, 184, 0.685);
+    background-color: rgb(20, 15, 34);
+}
+
+.foot{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: row;
+    font-family:sans-serif;
+}
+
+.list{
+    width:21vw;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#foottop li{
+    padding-top: 0.8vh;
+    padding-bottom: 0.8vh;
+}
+
+#foottop{
+    font-family:serif;
+    font-size: 1.5em;
+    color: rgba(240, 248, 255, 0.6);
+}
+
+
+.icon{
+    margin: 0px 0.4vw;
+}
+
+.linkedin{
+    color: #0A66C2;
+}
+
+.Git{
+    color: white;
+}
+
+.gmail1{
+    color: #e25f5a;
+}
+
+.gmail2{
+    color: #c7db46;
+}
+
+.gmail3{
+    color: #59cf55;
+}
+
+.gmail4{
+    color: #5967b9;
+}
+
+.gmail5{
+    color: rgb(206, 122, 175);
+}
+
+.down{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 2vw;
+}
+
+.downHead{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding-bottom: 1vh;
+    width: 37vw;
+    margin-right: 3vw;
+    color: #ce7aaf9d;
+}
+
+.last a{
+    font-family:serif;
+    text-decoration: none;
+    color: white;
+    float: left;
+    text-align: center;
+}
+
+.last{
+    display: flex;
+    background-color: rgb(20, 15, 34);
+    overflow: hidden;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    padding-left: 0.5vw;
+}
+
+.last a:visited{
+    color: rgba(233, 150, 122, 0.764);
+}
+
+.last a:hover{
+    color: rgba(255, 105, 180, 0.764);
+}
+
+.verticalLine{
+    background-color: rgba(255, 255, 255, 0.5);
+    width:0.05vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
