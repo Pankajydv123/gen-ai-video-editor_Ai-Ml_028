@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Image_editor() {
+export default function ImageEditor() {
   return (
     <div>
         <h1>hello i am image editor feature</h1>

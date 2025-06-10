@@ -55,7 +55,7 @@ export default function body() {
             <span style={{ "--i": 28 }}></span>
         </div>
         <div className="content">
-          <div class="heading-box">
+          <div className="heading-box">
             <h1>Progen Ai</h1>
             <div className="container1">
               <p id='hye'>Ai Online Photo Editor and Video Editor</p>
