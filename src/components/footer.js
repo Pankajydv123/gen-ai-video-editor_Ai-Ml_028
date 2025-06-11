@@ -9,92 +9,86 @@ export default function Footer() {
   return (
     <div className="Footer">
         <div className='foot'>
-        <div className="foot-section-1">
-            <ul className='list list-1'>
-                <li id="foottop" >Founders</li>
-                <li>Saharsh</li>
-                <li>Sreyan</li>
-                <li>Abhishek</li>
-                <li>Vikram</li>
-                <li>Pankaj</li>
-            </ul>
+        <div className="foot-section foot-section-1">
+            <div className="item-head">Founders</div>
+            <div className="item item-1">Saharsh</div>
+            <div className="item item-2">Sreyan</div>
+            <div className="item item-3">Abhishek</div>
+            <div className="item item-4">Vikram</div>
+            <div className="item item-5">Pankaj</div>
         </div>
-        <div className="foot-section-2">
-            <ul className='list list-2'>
-                <li id="foottop" >Info</li>
-                <li>leader</li>
-                <li>Supporter</li>
-                <li>Supporter</li>
-                <li>Supporter</li>
-                <li>Supporter</li>
-            </ul>
+        <div className="foot-section foot-section-2">
+            <div className="item-head">Info</div>
+            <div className="item item-1">leader</div>
+            <div className="item item-2">Supporter</div>
+            <div className="item item-3">Supporter</div>
+            <div className="item item-4">Supporter</div>
+            <div className="item item-5">Supporter</div>
         </div>
-        <div className="foot-section-3">
-            <ul className='list list-3'>
-                <li id="foottop" >mail</li>
-                <li>
-                    <a href="mailto:ee240002063@iiti.ac.in" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail1" />
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:ep240051018@iiti.ac.in" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail2" />
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:mems240005038@iiti.ac.in" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail3" />
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:cse240001078@iiti.ac.in" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail4" />
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:ee240002048@iiti.ac.in" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail5" />
-                    </a>
-                </li>
-            </ul>
+        <div className="foot-section foot-section-3">
+            <div className="item-head">mail</div>
+            <div className="item item-1">
+                <a href="mailto:ee240002063@iiti.ac.in" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail1" />
+                </a>
+            </div>
+            <div className="item item-2">
+                <a href="mailto:ep240051018@iiti.ac.in" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail2" />
+                </a>
+            </div>
+            <div className="item item-3">
+                <a href="mailto:mems240005038@iiti.ac.in" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail3" />
+                </a>
+            </div>
+            <div className="item item-4">
+                <a href="mailto:cse240001078@iiti.ac.in" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail4" />
+                </a>
+            </div>
+            <div className="item item-5">
+                <a href="mailto:ee240002048@iiti.ac.in" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} className="social-icon gmail5" />
+                </a>
+            </div>
         </div>
-        <div className="foot-section-4">
-            <ul className='list list-4'>
-                <li id="foottop" >Visit at</li>
-                <li>
-                    <a href="https://www.linkedin.com/in/saharsh-chokhandre-a0748121a/? 
-                    utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FontAwesomeIcon icon={faLinkedinIn} className="icon linkedin" /></a>
-                    <a href="https://github.com/Saharsh525"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/sreyan-reddy-regatte-865849314/"><FontAwesomeIcon icon={faLinkedinIn} className="icon linkedin" /></a>
-                    <a href="https://github.com/SreyanReddy"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/rathod-abhishek-349617367/"><FontAwesomeIcon icon={faLinkedinIn} className="icon linkedin" 
-                    /></a>
-                    <a href="https://github.com/Abhishek1175"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/velpula-vikram-varma-3137aa339/? 
-                    utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FontAwesomeIcon icon={faLinkedinIn} 
-                    className="icon linkedin" /></a>
-                    <a href="https://github.com/vikky737"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/pankaj-kumar-yadav-110037331/? 
-                    utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FontAwesomeIcon icon={faLinkedinIn} 
-                    className="icon linkedin" /></a>
-                    <a href="https://github.com/Pankajydv123"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
-                </li>
-            </ul>
+        <div className="foot-section foot-section-4">
+            <div className="item-head">
+                Visit at
+            </div>
+            <div className="item item-1">
+                <a href="https://www.linkedin.com/in/saharsh-chokhandre-a0748121a/? 
+                utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FontAwesomeIcon icon={faLinkedinIn} className="icon linkedin" /></a>
+                <a href="https://github.com/Saharsh525"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
+            </div>
+            <div className="item item-2">
+                <a href="https://www.linkedin.com/in/sreyan-reddy-regatte-865849314/"><FontAwesomeIcon icon={faLinkedinIn} className="icon linkedin" /></a>
+                <a href="https://github.com/SreyanReddy"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
+            </div>
+            <div className="item item-3">
+                <a href="https://www.linkedin.com/in/rathod-abhishek-349617367/"><FontAwesomeIcon icon={faLinkedinIn} className="icon linkedin" 
+                /></a>
+                <a href="https://github.com/Abhishek1175"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
+            </div>
+            <div className="item item-4">
+                <a href="https://www.linkedin.com/in/velpula-vikram-varma-3137aa339/? 
+                utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FontAwesomeIcon icon={faLinkedinIn} 
+                className="icon linkedin" /></a>
+                <a href="https://github.com/vikky737"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
+            </div>
+            <div className="item item-5">
+                <a href="https://www.linkedin.com/in/pankaj-kumar-yadav-110037331/? 
+                utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FontAwesomeIcon icon={faLinkedinIn} 
+                className="icon linkedin" /></a>
+                <a href="https://github.com/Pankajydv123"><FontAwesomeIcon icon={faGithub} className="icon Git" /></a>
+            </div>
         </div>
     </div>
     <hr />
     <div className="down">
         <div className="downHead">
-            <img src={Logo} alt="GenAi logo" style={{width:"3.2vw"}} />
+            <img src={Logo} alt="GenAi logo" />
             <h1>Progen</h1>
         </div>
         <div className="downPara">

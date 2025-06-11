@@ -7,29 +7,31 @@
 .foot{
     padding-top: 5vh;
     padding-bottom: 5vh;
-    display: flex;
-    flex-direction: row;
     font-family:sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.list{
-    width:21vw;
-    list-style: none;
+.foot-section{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-#foottop li{
-    padding-top: 0.8vh;
-    padding-bottom: 0.8vh;
+
+.item-head{
+    padding-bottom: 1.8vh;
+    font-size: 1.3em;
+    font-family: serif;
+    color: #f0f8ff99;
 }
 
-#foottop{
-    font-family:serif;
-    font-size: 1.5em;
-    color: rgba(240, 248, 255, 0.6);
+.foot-section .item{
+    font-size: 0.9em;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
 }
-
 
 .icon{
     margin: 0px 0.4vw;
@@ -63,6 +65,48 @@
     color: rgb(206, 122, 175);
 }
 
+.last a:visited{
+    color: rgba(233, 150, 122, 0.764);
+}
+
+.last a:hover{
+    color: rgba(255, 105, 180, 0.764);
+}
+
+.last a{
+    margin-bottom: 15px;
+    font-family:serif;
+    height: 298x;
+    text-decoration: none;
+    color: white;
+    float: left;
+    text-align: center;
+}
+
+.last{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(20, 15, 34);
+    overflow: hidden;
+    padding-top: 21.9px;
+    padding-bottom: 5pxpx;
+    padding-left: 7.68px;
+}
+
+.verticalLine{
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width:0.768px;
+    margin-right: 15.36px;
+    margin-left: 15.36px;
+}
+
+
+@media (min-width:736px) {
+.foot-section{
+    width: 25%;
+}
+
 .down{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -82,34 +126,40 @@
     color: #ce7aaf9d;
 }
 
-.last a{
-    font-family:serif;
-    text-decoration: none;
-    color: white;
-    float: left;
-    text-align: center;
-}
-
-.last{
+.downHead img{
     display: flex;
-    background-color: rgb(20, 15, 34);
-    overflow: hidden;
-    padding-top: 3vh;
-    padding-bottom: 2vh;
-    padding-left: 0.5vw;
+    align-self: center;
+    width:20%;
+}
 }
 
-.last a:visited{
-    color: rgba(233, 150, 122, 0.764);
+@media (max-width:736px) {
+.foot-section{
+    width: 50%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 
-.last a:hover{
-    color: rgba(255, 105, 180, 0.764);
+.down{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    gap: 2vw;
 }
 
-.verticalLine{
-    background-color: rgba(255, 255, 255, 0.5);
-    width:0.05vw;
-    margin-right: 1vw;
-    margin-left: 1vw;
+.downHead{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding-bottom: 1vh;
+    width: 37vw;
+    color: #ce7aaf9d;
+}
+
+.downHead img{
+    width:5vw;
+}
 }
