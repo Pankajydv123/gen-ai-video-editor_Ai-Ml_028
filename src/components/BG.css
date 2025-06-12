@@ -1,0 +1,65 @@
+.BG {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  background: #202124;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.SideBar {
+  padding: 2vh 1vw;
+  background-color: rgba(60, 64, 67, 0.95);
+  width: 10vw;
+  border-right: 1px solid #3c4043;
+}
+
+.SideBar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.SideBar li {
+  padding: 1vh 0.5vw;
+  border-radius: 0.4vw;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.SideBar li:hover {
+  background-color: #5f6368;
+  color: #e8eaed;
+}
+
+.BodyBar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+}
+
+.UploadBox {
+  width: 60%;
+  height: 60%;
+  background-color: #303134;
+  border: 2px dashed #8ab4f8;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bdc1c6;
+  text-align: center;
+  padding: 2vh;
+  transition: 0.3s;
+}
+
+.UploadBox:hover {
+  background-color: #3c4043;
+  border-color: #aecbfa;
+}
