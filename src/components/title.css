@@ -78,3 +78,30 @@ ul{
 #hello:hover{
     color: #edf597;
 }
+
+.nav-item-2 {
+  position: relative;
+}
+
+.nav-item-2:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #333;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    background-color: rgba(149, 91, 91, 0.664);
+    filter: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #f4f8e4;
+  border-radius: 0.5rem;
+  z-index: 2000;
+  min-width: 200px;
+}

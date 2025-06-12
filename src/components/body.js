@@ -74,7 +74,7 @@ export default function body() {
               <p>Edit your photo with ease using powerful AI that understands what you need. Whether you're removing distractions, enhancing 
                 details, or giving your image a whole new look, everything happens smoothly and quickly. No complex tools—just smart, effortless 
                 results that make your photos stand out.</p>
-              <Link to="/image_editor">
+              <Link to="/imageEditor">
               <button className="button1">Unleash the AI Touch</button>
               </Link>
             </div>
@@ -90,7 +90,7 @@ export default function body() {
               <p>Edit your video with ease using powerful AI that adapts to your creative vision. Whether you're cutting unwanted scenes, enhancing 
                 visuals, adjusting audio, or adding stylish effects, everything happens smoothly and efficiently. No complicated software—just 
                 smart, intuitive tools that help your videos look polished and professional in no time.</p>
-              <Link to="/video_editor">
+              <Link to="/videoEditor">
               <button className="button2">Unleash the AI Touch</button>
               </Link>
             </div>
