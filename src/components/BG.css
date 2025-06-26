@@ -42,11 +42,12 @@
   justify-content: center;
   align-items: center;
   padding: 2vh;
+  flex-direction: column;
 }
 
 .UploadBox {
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
   background-color: #303134;
   border: 2px dashed #8ab4f8;
   border-radius: 1rem;
@@ -62,4 +63,14 @@
 .UploadBox:hover {
   background-color: #3c4043;
   border-color: #aecbfa;
+}
+
+.UploadBox video,
+.OutputBox video {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }

@@ -6,6 +6,9 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../Assests/Logo.png';
 
 export default function Footer() {
+    const handleSomething = () => {
+        console.log("Button clicked!");
+    };
   return (
     <div className="Footer">
         <div className='foot'>
@@ -100,17 +103,15 @@ export default function Footer() {
         </div>
     </div>
     <div className="last">
-        <a href="#">FAQ</a> 
+        <button href="#" onClick={handleSomething}>FAQ</button> 
         <div className="verticalLine"></div>
-        <a href="#">Contact Us</a>
+        <button href="#" onClick={handleSomething}>Contact Us</button>
         <div className="verticalLine"></div>
-        <a href="#">Refund Policy</a>
+        <button href="#" onClick={handleSomething}>Privacy Policy</button>
         <div className="verticalLine"></div>
-        <a href="#">Privacy Policy</a>
+        <button href="#" onClick={handleSomething}>Terms of use</button>
         <div className="verticalLine"></div>
-        <a href="#">Terms of use</a>
-        <div className="verticalLine"></div>
-        <a href="#">&copy; 2025 | Progen AI</a>
+        <button href="#" onClick={handleSomething}>&copy; 2025 | Progen AI</button>
     </div>
     </div>
   )

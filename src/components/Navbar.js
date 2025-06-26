@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import Logo from '../Assests/Logo.png';
 
 export default function Navbar() {
+  const handleSomething = () => {
+    console.log("Button clicked!");
+  };
   return (
     <nav className="navbar navbar-expand-lg fantastic-gradient" style={{
       padding: '1rem 2rem 1rem 0.5rem',
@@ -50,9 +53,9 @@ export default function Navbar() {
                 Features
               </Link>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Feature 1</a></li>
-                <li><a className="dropdown-item" href="#">Feature 2</a></li>
-                <li><a className="dropdown-item" href="#">Feature 3</a></li>
+                <li><button className="dropdown-item" onClick={handleSomething} href="#">Feature 1</button></li>
+                <li><button className="dropdown-item" onClick={handleSomething} href="#">Feature 2</button></li>
+                <li><button className="dropdown-item" onClick={handleSomething} href="#">Feature 3</button></li>
               </ul>
             </li>
             <li className="nav-item-3">

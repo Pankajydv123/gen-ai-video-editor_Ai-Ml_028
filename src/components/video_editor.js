@@ -1,53 +1,82 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './BG.css';
+import axios from 'axios';
 
 export default function VideoEditor() {
+  const inputRef = useRef();
   const [videoFile, setVideoFile] = useState(null);
+  const [videoPreview, setVideoPreview] = useState(null);
+  const [outputVideo, setOutputVideo] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleUpload = (index) => {
-    const file = index.target.files[0];
+  const handleUpload = (e) => {
+    const file = e.target.files[0];
     if (file && file.type.startsWith("video/")) {
-      setVideoFile(URL.createObjectURL(file));
+      setVideoFile(file);
+      setVideoPreview(URL.createObjectURL(file));
+      setOutputVideo(null);
+    }
+  };
+
+  const handleRemoveBackground = async () => {
+    if (!videoFile) return;
+
+    setLoading(true);
+    const formData = new FormData();
+    formData.append("video", videoFile);  // ✅ must match backend
+
+    try {
+      const res = await axios.post("http://localhost:8000/remove-background", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+        responseType: "blob"
+      });
+
+      const blob = new Blob([res.data], { type: "video/mp4" });
+      setOutputVideo(URL.createObjectURL(blob));
+    } catch (err) {
+      console.error(err);
+      alert("Background removal failed");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className='BG'>
+    <div className="BG">
       <div className="SideBar">
         <ul>
-          <li>Upload</li>
-          <li>Cut</li>
-          <li>Effects</li>
-          <li>Audio</li>
-          <li>Export</li>
+          <li onClick={() => inputRef.current.click()}>Upload</li>
+          <li onClick={handleRemoveBackground}>Remove BG</li>
         </ul>
       </div>
 
       <div className="BodyBar">
-        <div className="UploadBox">
-          {!videoFile ? (
-            <>
-              <label htmlFor="uploadInput" style={{ cursor: 'pointer' }}>
-                <p>Click here or drag-and-drop to upload a video</p>
-              </label>
-              <input
-                id="uploadInput"
-                type="file"
-                accept="video/*"
-                style={{ display: 'none' }}
-                onChange={handleUpload}
-              />
-            </>
+        <div className="UploadBox" onClick={() => inputRef.current.click()}>
+          <input
+            ref={inputRef}
+            type="file"
+            accept="video/*"
+            style={{ display: "none" }}
+            onChange={handleUpload}
+          />
+          {videoPreview ? (
+            <video src={videoPreview} controls />
           ) : (
-            <video
-              controls
-              width="100%"
-              height="100%"
-              style={{ borderRadius: '1rem' }}
-              src={videoFile}
-            />
+            <p>Click to upload a video</p>
           )}
         </div>
+
+        {loading && <p style={{ color: "white" }}>Processing video...</p>}
+
+        {outputVideo && (
+          <div className="OutputBox">
+            <h4>Background Removed:</h4>
+            <video src={outputVideo} controls />
+            <a href={outputVideo} download="bg_removed.mp4">
+              <button>Download Video</button>
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
