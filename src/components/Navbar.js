@@ -50,9 +50,9 @@ export default function Navbar() {
                 Features
               </Link>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Feature 1</a></li>
-                <li><a className="dropdown-item" href="#">Feature 2</a></li>
-                <li><a className="dropdown-item" href="#">Feature 3</a></li>
+                <li><a className="dropdown-item" href="https://example.com">Feature 1</a></li>
+                <li><a className="dropdown-item" href="https://example.com">Feature 2</a></li>
+                <li><a className="dropdown-item" href="https://example.com">Feature 3</a></li>
               </ul>
             </li>
             <li className="nav-item-3">

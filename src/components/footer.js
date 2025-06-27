@@ -100,15 +100,15 @@ export default function Footer() {
         </div>
     </div>
     <div className="last">
-        <a href="#">FAQ</a> 
+        <a href="https://example.com">FAQ</a> 
         <div className="verticalLine"></div>
-        <a href="#">Contact Us</a>
+        <a href="https://example.com">Contact Us</a>
         <div className="verticalLine"></div>
-        <a href="#">Privacy Policy</a>
+        <a href="https://example.com">Privacy Policy</a>
         <div className="verticalLine"></div>
-        <a href="#">Terms of use</a>
+        <a href="https://example.com">Terms of use</a>
         <div className="verticalLine"></div>
-        <a href="#">&copy; 2025 | Progen AI</a>
+        <a href="https://example.com">&copy; 2025 | Progen AI</a>
     </div>
     </div>
   )
