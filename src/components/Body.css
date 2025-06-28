@@ -99,12 +99,12 @@
   align-items: center;
   align-content: center;
   align-self: center;
-    padding: 1.68% 2% 0.84% 1%;
-    width: 30%;
-    max-height: 60vh;
-    background-color: rgba(95, 158, 160, 0.1);
-    border-radius: 5%;
-    box-shadow: 0 0.54vh 20px rgba(0, 0, 0, 0.1);
+  padding: 1.68% 2% 0.84% 1%;
+  width: 30%;
+  max-height: 60vh;
+  background-color: rgba(95, 158, 160, 0.1);
+  border-radius: 5%;
+  box-shadow: 0 0.54vh 20px rgba(0, 0, 0, 0.1);
 }
 
 .textcontainer h2{

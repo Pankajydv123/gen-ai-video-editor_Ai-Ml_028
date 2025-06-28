@@ -23,7 +23,7 @@ export default function VideoEditor() {
 
     setLoading(true);
     const formData = new FormData();
-    formData.append("video", videoFile);  // ✅ must match backend
+    formData.append("video", videoFile);
 
     try {
       const res = await axios.post("https://gen-ai-video-editorai-ml028-production.up.railway.app/remove-background", formData, {
