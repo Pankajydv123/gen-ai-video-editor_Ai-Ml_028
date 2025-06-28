@@ -26,7 +26,7 @@ export default function VideoEditor() {
     formData.append("video", videoFile);
 
     try {
-      const res = await axios.post("https://gen-ai-video-editorai-ml028-production.up.railway.app/remove-background", formData, {
+      const res = await axios.post("https://gen-ai-video-api.onrender.com/remove-background", formData, {
         headers: { "Content-Type": "multipart/form-data" },
         responseType: "blob"
       });
