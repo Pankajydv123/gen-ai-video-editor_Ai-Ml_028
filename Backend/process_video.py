@@ -1,41 +1,40 @@
 import cv2
-import os
-import numpy as np
-from PIL import Image
 from rembg import remove
-import tempfile
-import gc
-import subprocess
+import numpy as np
+import os
 
-def process_frame(path):
-    with open(path, "rb") as f:
-        input_data = f.read()
-    output = remove(input_data)
-    with open(path, "wb") as f:
-        f.write(output)
-    # Force memory release
-    del input_data
-    del output
-    gc.collect()
+def process_video(input_path, output_path):
+    cap = cv2.VideoCapture(input_path)
+    width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    fps    = cap.get(cv2.CAP_PROP_FPS)
 
-def remove_background_from_video(input_path, output_path):
-    with tempfile.TemporaryDirectory() as temp_dir:
-        frame_pattern = os.path.join(temp_dir, "frame_%05d.png")
+    out = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (width, height), True)
 
-        # Step 1: Extract frames (better subprocess version)
-        extract_cmd = [
-            "ffmpeg", "-y", "-i", input_path, frame_pattern
-        ]
-        subprocess.run(extract_cmd, check=True)
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            break
 
-        # Step 2: Process frames sequentially to save RAM
-        frame_files = sorted([os.path.join(temp_dir, f) for f in os.listdir(temp_dir) if f.endswith('.png')])
-        for path in frame_files:
-            process_frame(path)
+        # Convert to PNG and apply rembg
+        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        _, buffer = cv2.imencode(".png", rgb_frame)
+        removed = remove(buffer.tobytes())
 
-        # Step 3: Reassemble video
-        reencode_cmd = [
-            "ffmpeg", "-y", "-framerate", "25", "-i", os.path.join(temp_dir, "frame_%05d.png"),
-            "-c:v", "libx264", "-pix_fmt", "yuv420p", output_path
-        ]
-        subprocess.run(reencode_cmd, check=True)
+        nparr = np.frombuffer(removed, np.uint8)
+        img_np = cv2.imdecode(nparr, cv2.IMREAD_UNCHANGED)
+
+        # Resize if needed and handle alpha channel
+        if img_np.shape[2] == 4:
+            bgr = cv2.cvtColor(img_np, cv2.COLOR_BGRA2BGR)
+        else:
+            bgr = img_np
+
+        out.write(bgr)
+        del frame, rgb_frame, buffer, removed, img_np, bgr  # free memory
+
+    cap.release()
+    out.release()
+    cv2.destroyAllWindows()
+
+process_video("input.mp4", "output.mp4")
