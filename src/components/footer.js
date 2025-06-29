@@ -107,8 +107,6 @@ export default function Footer() {
         <a href="https://example.com">Privacy Policy</a>
         <div className="verticalLine"></div>
         <a href="https://example.com">Terms of use</a>
-        <div className="verticalLine"></div>
-        <a href="https://example.com">&copy; 2025 | Progen AI</a>
     </div>
     </div>
   )
