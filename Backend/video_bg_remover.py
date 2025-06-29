@@ -9,9 +9,13 @@ from process_video import remove_background_from_video
 app = FastAPI()
 
 # CORS for all origins (update with your frontend domain for security)
+origins = [
+    "https://pankajydv123.github.io",  # ✅ Exact domain of your frontend
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # You can specify frontend domain(s) here
+    allow_origins=origins,     # ✅ Important: no "*"
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
