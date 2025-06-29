@@ -1,32 +1,36 @@
-# Created by venv; see https://docs.python.org/3/library/venv.html
+# Ignore everything by default
 *
-# Python cache and compiled files
+
+# But include these exceptions
+!*/
+!*.py
+!*.js
+!*.json
+!*.html
+!*.css
+!Procfile
+!.gitignore
+!requirements.txt
+
+# Now ignore specific junk
 __pycache__/
 *.pyc
-
-# Environment folders
 env/
 .venv/
 object_removal_env/
 
-# Videos and large media
+# Ignore videos and heavy assets
 *.mp4
 *.avi
 *.mov
 *.mkv
-
-# Model weights and checkpoints
+models/
 *.pth
 *.pt
 *.ckpt
-models/
 
-# Jupyter notebook checkpoints
+# Jupyter checkpoints and IDE files
 .ipynb_checkpoints/
-
-# VS Code settings (optional)
 .vscode/
-
-# OS-specific files
 .DS_Store
 Thumbs.db
