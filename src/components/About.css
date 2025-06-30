@@ -1,0 +1,99 @@
+.about-fullpage {
+  width: 100%;
+  padding: 6vh 8vw;
+  background: linear-gradient(to right, #0a0f1a, #0d1f3f);
+  font-family: 'Segoe UI', sans-serif;
+  color: #e0f7ff;
+}
+
+.about-overlay {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  background: rgba(0, 153, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 153, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 153, 255, 0.08);
+}
+
+.about-inner {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.main-heading {
+  font-size: 3rem;
+  color: #00ccff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sub-heading {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #99dfff;
+  margin-bottom: 2.5rem;
+}
+
+.about-inner h2 {
+  font-size: 1.8rem;
+  color: #66e0ff;
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-inner p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  color: #d0ecff;
+}
+
+.about-inner ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-inner ul li {
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  background: rgba(0, 153, 255, 0.08);
+  border-left: 3px solid #00ccff;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.about-inner ul li:hover {
+  background: rgba(0, 153, 255, 0.15);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ending-quote {
+  margin-top: 3rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #b0d7f7;
+}

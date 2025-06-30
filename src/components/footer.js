@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../Assests/Logo.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -100,15 +101,15 @@ export default function Footer() {
         </div>
     </div>
     <div className="last">
-        <a href="https://example.com">FAQ</a> 
+        <Link to="/FAQ">FAQ</Link> 
         <div className="verticalLine"></div>
-        <a href="https://example.com">Contact Us</a>
+        <Link to="/Contact">Contact Us</Link>
         <div className="verticalLine"></div>
-        <a href="https://example.com">Privacy Policy</a>
+        <Link to="/PrivacyPolicy">Privacy Policy</Link>
         <div className="verticalLine"></div>
-        <a href="https://example.com">Terms of use</a>
+        <Link to="/TermsOfUse">Terms of use</Link>
         <div className="verticalLine"></div>
-        <a href="https://example.com">&copy; 2025 | Progen AI</a>
+        <Link to="#">&copy; 2025 | Progen AI</Link>
     </div>
     </div>
   )

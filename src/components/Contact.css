@@ -1,0 +1,100 @@
+.contact-broad {
+  padding: 6vh 5vw;
+  width: 100%;
+  background: linear-gradient(to right, #050a16, #0c1f33);
+  color: #e3faff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-head {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-head h1 {
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 1rem;
+}
+
+.contact-head p {
+  font-size: 1.2rem;
+  color: #c1e6ff;
+  max-width: 800px;
+  margin: auto;
+}
+
+.team-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+}
+
+.team-card h3 {
+  color: #00ffe1;
+  margin-bottom: 0.3rem;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #b2eaff;
+  margin-bottom: 1rem;
+}
+
+.icons a {
+  margin: 0 8px;
+  color: #b7e5ff;
+  font-size: 1.3rem;
+  transition: color 0.2s ease;
+}
+
+.icons a:hover {
+  color: #00f0ff;
+}
+
+.general-links {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.general-links h2 {
+  color: #00d9ff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  font-size: 1.6rem;
+  color: #aadfff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #00fff7;
+}
+
+.contact-footer-note {
+  text-align: center;
+  font-size: 1rem;
+  color: #9fdfff;
+  max-width: 800px;
+  margin: auto;
+}

@@ -1,0 +1,59 @@
+/* TermsOfUse.css */
+
+.terms-section {
+  background: linear-gradient(to bottom, #0c0c1c, #1e1e2e);
+  color: #e5f9ff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.terms-container {
+  max-width: 960px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terms-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.terms-header h1 {
+  font-size: 2.5rem;
+  color: #00f5e1;
+  margin-bottom: 10px;
+}
+
+.terms-header p {
+  font-size: 1.1rem;
+  color: #b0dff7;
+}
+
+.terms-block {
+  margin-bottom: 30px;
+}
+
+.terms-block h2 {
+  font-size: 1.4rem;
+  color: #4df0f4;
+  margin-bottom: 10px;
+}
+
+.terms-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e5f9ff;
+}
+
+.terms-footer-note {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #7ebec6;
+  font-style: italic;
+}
