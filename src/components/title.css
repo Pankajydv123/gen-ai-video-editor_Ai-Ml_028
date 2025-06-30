@@ -26,6 +26,10 @@ navbar-toggler {
     letter-spacing:0.1em;
 }
 
+.tat a:visited {
+  color: rgb(144, 8, 67);
+}
+
 .tat a:hover{
     padding: 0.5vh 0.6vw 0.5vh 0.6vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
