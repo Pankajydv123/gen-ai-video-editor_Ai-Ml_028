@@ -54,7 +54,7 @@
   padding-left: 0;
 }
 
-.privacy-block ul li::before {
+.privacy-block ul li:before {
   content: '•';
   color: #00f5e1;
   font-weight: bold;
