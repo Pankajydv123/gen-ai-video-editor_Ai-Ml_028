@@ -4,6 +4,7 @@
   background: linear-gradient(to right, #0a0f1a, #0d1f3f);
   font-family: 'Segoe UI', sans-serif;
   color: #e0f7ff;
+  overflow-x: hidden;
 }
 
 .about-overlay {
@@ -50,18 +51,26 @@
   color: #d0ecff;
 }
 
+/* Responsive Card List Fix */
 .about-inner ul {
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   padding: 0;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .about-inner ul li {
+  list-style: none;
+  flex: 1 1 250px;
+  max-width: 300px;
   padding: 0.8rem 1rem;
-  margin: 0.5rem 0;
   background: rgba(0, 153, 255, 0.08);
   border-left: 3px solid #00ccff;
   border-radius: 10px;
   transition: background 0.3s ease;
+  color: #d0ecff;
 }
 
 .about-inner ul li:hover {
@@ -96,4 +105,58 @@
   font-style: italic;
   font-size: 1.2rem;
   color: #b0d7f7;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 2.4rem;
+  }
+  .sub-heading {
+    font-size: 1.2rem;
+  }
+  .about-inner h2 {
+    font-size: 1.5rem;
+  }
+  .about-overlay {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+  .sub-heading {
+    font-size: 1rem;
+  }
+  .about-inner h2 {
+    font-size: 1.3rem;
+  }
+  .about-inner p,
+  .about-inner ul li {
+    font-size: 0.95rem;
+  }
+  .about-fullpage {
+    padding: 4vh 5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
+  .sub-heading {
+    font-size: 0.95rem;
+  }
+  .about-inner h2 {
+    font-size: 1.1rem;
+  }
+  .about-inner p,
+  .about-inner ul li {
+    font-size: 0.88rem;
+  }
+  .about-overlay {
+    padding: 1.5rem;
+  }
 }
