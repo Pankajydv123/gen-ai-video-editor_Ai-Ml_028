@@ -52,6 +52,7 @@
 .privacy-block ul {
   list-style: none;
   padding-left: 0;
+  gap: 1vw;
 }
 
 .privacy-block ul li:before {
