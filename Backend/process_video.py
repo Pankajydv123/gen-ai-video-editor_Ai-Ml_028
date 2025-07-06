@@ -1,42 +1,49 @@
-import cv2
+import os
+import tempfile
+import subprocess
+from PIL import Image
 from rembg import remove
-import numpy as np
+
+def process_frame(path):
+    try:
+        img = Image.open(path).convert("RGBA")
+
+        # Resize while maintaining aspect ratio (optional)
+        img.thumbnail((512, 512), Image.Resampling.LANCZOS)
+
+        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as temp:
+            img.save(temp.name)
+            with open(temp.name, "rb") as f:
+                input_data = f.read()
+
+        output = remove(input_data)
+
+        with open(path, "wb") as f:
+            f.write(output)
+
+        os.remove(temp.name)
+
+    except Exception as e:
+        print(f"Frame processing failed: {e}")
 
 def remove_background_from_video(input_path, output_path):
-    cap = cv2.VideoCapture(input_path)
-    width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    fps    = cap.get(cv2.CAP_PROP_FPS)
+    with tempfile.TemporaryDirectory() as temp_dir:
+        frame_pattern = os.path.join(temp_dir, "frame_%05d.png")
 
-    out = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (width, height))
+        subprocess.run([
+            "ffmpeg", "-y", "-i", input_path, "-vf", "fps=10", frame_pattern
+        ], check=True)
 
-    while cap.isOpened():
-        ret, frame = cap.read()
-        if not ret:
-            break
+        frame_files = sorted([
+            os.path.join(temp_dir, f)
+            for f in os.listdir(temp_dir) if f.endswith('.png')
+        ])
 
-        try:
-            rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            _, buffer = cv2.imencode(".png", rgb)
-            result = remove(buffer.tobytes())
+        for frame_path in frame_files:
+            process_frame(frame_path)
 
-            nparr = np.frombuffer(result, np.uint8)
-            img_np = cv2.imdecode(nparr, cv2.IMREAD_UNCHANGED)
-
-            # If alpha channel exists, drop it
-            if img_np.shape[2] == 4:
-                bgr = cv2.cvtColor(img_np, cv2.COLOR_BGRA2BGR)
-            else:
-                bgr = img_np
-
-            out.write(bgr)
-
-            # Free memory
-            del frame, rgb, buffer, result, nparr, img_np, bgr
-        except Exception as e:
-            print(f"Frame processing failed: {e}")
-            continue
-
-    cap.release()
-    out.release()
-    cv2.destroyAllWindows()
+        subprocess.run([
+            "ffmpeg", "-y", "-framerate", "10", "-i",
+            os.path.join(temp_dir, "frame_%05d.png"),
+            "-c:v", "libx264", "-pix_fmt", "yuv420p", output_path
+        ], check=True)

@@ -9,7 +9,8 @@ from process_video import remove_background_from_video
 app = FastAPI()
 
 origins = [
-    "https://pankajydv123.github.io",
+    "http://localhost:3000",  # For local React testing
+    "https://pankajydv123.github.io",  # For deployed frontend
 ]
 
 app.add_middleware(
@@ -39,22 +40,18 @@ async def remove_bg(video: UploadFile = File(...)):
         with open(input_path, "wb") as f:
             shutil.copyfileobj(video.file, f)
 
-        # Background removal
         remove_background_from_video(input_path, output_path)
 
-        # Stream output
-        response = StreamingResponse(
+        return StreamingResponse(
             open(output_path, "rb"),
             media_type="video/mp4",
             headers={"Content-Disposition": f"attachment; filename=bg_removed_{file_id}.mp4"}
         )
-        return response
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Background removal failed: {str(e)}")
 
     finally:
-        # Clean up input; output kept for response
         try:
             if os.path.exists(input_path):
                 os.remove(input_path)

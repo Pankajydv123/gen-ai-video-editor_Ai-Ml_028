@@ -26,16 +26,30 @@ export default function VideoEditor() {
     formData.append("video", videoFile);
 
     try {
-      const res = await axios.post("http://localhost:8000/remove-background", formData, {
+      const res = await axios.post("http://gen-ai-video-editor-ai-ml-028.onrender.com/remove-background", formData, {
         headers: { "Content-Type": "multipart/form-data" },
-        responseType: "blob"
+        responseType: "blob",
+        validateStatus: () => true,
       });
 
+      if (res.status !== 200) {
+        const errorText = await res.data.text();
+        let errorMsg;
+        try {
+          const json = JSON.parse(errorText);
+          errorMsg = json.detail || "Unknown error";
+        } catch {
+          errorMsg = errorText || "Server returned an unknown error.";
+        }
+        throw new Error(errorMsg);
+      }
+
       const blob = new Blob([res.data], { type: "video/mp4" });
-      setOutputVideo(URL.createObjectURL(blob));
+      const videoUrl = URL.createObjectURL(blob);
+      setOutputVideo(videoUrl);
     } catch (err) {
-      console.error(err);
-      alert("Background removal failed");
+      console.error("❌ Background removal failed:", err);
+      alert("Background removal failed:\n" + err.message);
     } finally {
       setLoading(false);
     }
