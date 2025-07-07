@@ -11,6 +11,7 @@
 !Procfile
 !.gitignore
 !requirements.txt
+!*.sh
 
 # Now ignore specific junk
 __pycache__/
