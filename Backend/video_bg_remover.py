@@ -9,7 +9,7 @@ from process_video import remove_background_from_video
 
 app = FastAPI()
 
-# CORS Setup
+# CORS setup
 origins = [
     "http://localhost:3000",
     "https://pankajydv123.github.io"
@@ -40,23 +40,22 @@ async def remove_bg_url(request: Request):
         if not video_url:
             raise HTTPException(status_code=400, detail="Video URL is missing")
 
-        # Generate unique filenames
         file_id = str(uuid.uuid4())
         input_path = os.path.join(UPLOAD_DIR, f"{file_id}.mp4")
         output_path = os.path.join(OUTPUT_DIR, f"{file_id}_output.mp4")
 
-        # Download the video
+        # Download from Backblaze URL
         response = requests.get(video_url, stream=True)
         if response.status_code != 200:
-            raise HTTPException(status_code=400, detail="Failed to download video")
+            raise HTTPException(status_code=400, detail="Failed to download video from URL.")
 
         with open(input_path, "wb") as f:
             shutil.copyfileobj(response.raw, f)
 
-        # Process the video
+        # Process video
         remove_background_from_video(input_path, output_path)
 
-        # Return the processed file
+        # Return the output video
         return StreamingResponse(
             open(output_path, "rb"),
             media_type="video/mp4",

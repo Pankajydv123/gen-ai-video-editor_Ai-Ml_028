@@ -7,8 +7,6 @@ from rembg import remove
 def process_frame(path):
     try:
         img = Image.open(path).convert("RGBA")
-
-        # Resize while maintaining aspect ratio (optional)
         img.thumbnail((512, 512), Image.Resampling.LANCZOS)
 
         with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as temp:
