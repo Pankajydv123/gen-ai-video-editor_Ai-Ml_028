@@ -1,24 +1,25 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
-import os
-import shutil
 import uuid
+import os
+import requests
+import shutil
 from process_video import remove_background_from_video
 
 app = FastAPI()
 
+# CORS Setup
 origins = [
-    "http://localhost:3000",  # For local React testing
-    "https://pankajydv123.github.io",  # For deployed frontend
+    "http://localhost:3000",
+    "https://pankajydv123.github.io"
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["*"]
 )
 
 UPLOAD_DIR = "temp_uploads"
@@ -27,21 +28,35 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 @app.get("/")
-def root():
-    return {"status": "Backend running successfully"}
+def home():
+    return {"message": "Backend is live"}
 
-@app.post("/remove-background")
-async def remove_bg(video: UploadFile = File(...)):
-    file_id = str(uuid.uuid4())
-    input_path = os.path.join(UPLOAD_DIR, f"{file_id}.mp4")
-    output_path = os.path.join(OUTPUT_DIR, f"{file_id}_output.mp4")
-
+@app.post("/remove-background-from-url")
+async def remove_bg_url(request: Request):
     try:
-        with open(input_path, "wb") as f:
-            shutil.copyfileobj(video.file, f)
+        data = await request.json()
+        video_url = data.get("video_url")
 
+        if not video_url:
+            raise HTTPException(status_code=400, detail="Video URL is missing")
+
+        # Generate unique filenames
+        file_id = str(uuid.uuid4())
+        input_path = os.path.join(UPLOAD_DIR, f"{file_id}.mp4")
+        output_path = os.path.join(OUTPUT_DIR, f"{file_id}_output.mp4")
+
+        # Download the video
+        response = requests.get(video_url, stream=True)
+        if response.status_code != 200:
+            raise HTTPException(status_code=400, detail="Failed to download video")
+
+        with open(input_path, "wb") as f:
+            shutil.copyfileobj(response.raw, f)
+
+        # Process the video
         remove_background_from_video(input_path, output_path)
 
+        # Return the processed file
         return StreamingResponse(
             open(output_path, "rb"),
             media_type="video/mp4",
@@ -50,10 +65,3 @@ async def remove_bg(video: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Background removal failed: {str(e)}")
-
-    finally:
-        try:
-            if os.path.exists(input_path):
-                os.remove(input_path)
-        except:
-            pass
