@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gen-ai-video-editor_Ai-Ml_028/static/css/main.30e0f72c.css",
-    "main.js": "/gen-ai-video-editor_Ai-Ml_028/static/js/main.97a323f1.js",
+    "main.js": "/gen-ai-video-editor_Ai-Ml_028/static/js/main.72f3343c.js",
     "static/js/488.ec9f5f96.chunk.js": "/gen-ai-video-editor_Ai-Ml_028/static/js/488.ec9f5f96.chunk.js",
     "static/media/Logo.png": "/gen-ai-video-editor_Ai-Ml_028/static/media/Logo.69f1cf969789f9adfa53.png",
     "static/media/photo8.jpg": "/gen-ai-video-editor_Ai-Ml_028/static/media/photo8.0f342f66703caf970b6a.jpg",
@@ -12,11 +12,11 @@
     "static/media/photo6.jpg": "/gen-ai-video-editor_Ai-Ml_028/static/media/photo6.57523acce96d56b3147f.jpg",
     "index.html": "/gen-ai-video-editor_Ai-Ml_028/index.html",
     "main.30e0f72c.css.map": "/gen-ai-video-editor_Ai-Ml_028/static/css/main.30e0f72c.css.map",
-    "main.97a323f1.js.map": "/gen-ai-video-editor_Ai-Ml_028/static/js/main.97a323f1.js.map",
+    "main.72f3343c.js.map": "/gen-ai-video-editor_Ai-Ml_028/static/js/main.72f3343c.js.map",
     "488.ec9f5f96.chunk.js.map": "/gen-ai-video-editor_Ai-Ml_028/static/js/488.ec9f5f96.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30e0f72c.css",
-    "static/js/main.97a323f1.js"
+    "static/js/main.72f3343c.js"
   ]
 }
