@@ -9,35 +9,25 @@ export default function VideoEditor() {
   const [outputVideo, setOutputVideo] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handleUpload = async (e) => {
+  const handleUpload = (e) => {
     const file = e.target.files[0];
     if (file && file.type.startsWith("video/")) {
       setVideoFile(file);
       setVideoPreview(URL.createObjectURL(file));
       setOutputVideo(null);
-
-      // Upload to Backblaze
-      const formData = new FormData();
-      formData.append("file", file);
-
-      setLoading(true);
-      try {
-        const res = await axios.post("https://video-upload-b2.onrender.com/upload", formData);
-        const videoUrl = res.data.video_url;
-        handleRemoveBackground(videoUrl);
-      } catch (err) {
-        console.error("Upload failed:", err);
-        alert("Failed to upload video.");
-        setLoading(false);
-      }
     }
   };
 
-  const handleRemoveBackground = async (videoUrl) => {
+  const handleRemoveBackground = async () => {
+    if (!videoFile) return;
+
+    setLoading(true);
+    const formData = new FormData();
+    formData.append("video", videoFile);
+
     try {
-      const res = await axios.post("https://gen-ai-video-editor-ai-ml-028.onrender.com/remove-background-from-url", {
-        video_url: videoUrl
-      }, {
+      const res = await axios.post("https://gen-ai-video-editor-ai-ml-028.onrender.com/remove-background", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
         responseType: "blob",
         validateStatus: () => true,
       });
@@ -55,8 +45,8 @@ export default function VideoEditor() {
       }
 
       const blob = new Blob([res.data], { type: "video/mp4" });
-      const videoUrlBlob = URL.createObjectURL(blob);
-      setOutputVideo(videoUrlBlob);
+      const videoUrl = URL.createObjectURL(blob);
+      setOutputVideo(videoUrl);
     } catch (err) {
       console.error("❌ Background removal failed:", err);
       alert("Background removal failed:\n" + err.message);
@@ -70,6 +60,7 @@ export default function VideoEditor() {
       <div className="SideBar">
         <ul>
           <li onClick={() => inputRef.current.click()}>Upload</li>
+          <li onClick={handleRemoveBackground}>Remove BG</li>
         </ul>
       </div>
 
